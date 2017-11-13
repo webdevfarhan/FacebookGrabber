@@ -103,12 +103,24 @@ $(document).ready(function () {
                     success: function (response) {
                         $('#tohide').hide();
                         $('#resultimg').attr("src", "https://graph.facebook.com/"+response.id+"/picture?type=normal&height=400&width=400");
-                        $('#name').text("Name: "+response.name);
-                        $('#hometown').text("Hometown: "+response.hometown.name);
-                        $('#email').text("Email: "+response.email);
-                        $('#birthday').text("Birthday: "+response.birthday);
-                        $('#school').text("School: "+response.education[0].school.name);
-                        $('#location').text("Location: "+response.location.name);
+                        if(response.name){
+                            $('#name').text("Name: "+response.name);
+                        }
+                        if(response.hometown){
+                            $('#hometown').text("Hometown: "+response.hometown.name);
+                        }
+                        if(response.email){
+                            $('#email').text("Email: "+response.email);
+                        }
+                        if(response.birthday){
+                            $('#birthday').text("Birthday: "+response.birthday);
+                        }
+                        if(response.location){
+                            $('#location').text("Location: "+response.location.name);
+                        }
+                        if(response.education){
+                            $('#school').text("School: "+response.education[0].school.name);
+                        }
                         $('#resultbox').show();
                         
                     },
