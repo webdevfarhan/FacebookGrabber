@@ -5,7 +5,7 @@ $(document).ready(function () {
         function getResponse() {
             var accessToken = $("#grab").val();
     
-            $.ajax('http://graph.facebook.com/me/permissions?access_token=' + accessToken, {
+            $.ajax('https://graph.facebook.com/me/permissions?access_token=' + accessToken, {
                 
                                 success: function (response) {
                                     var permissionsArray = [];
@@ -98,7 +98,7 @@ $(document).ready(function () {
                 
                         );
     
-            $.ajax('http://graph.facebook.com/me?fields=hometown,email,about,birthday,education,name,location,work&access_token=' + accessToken, {
+            $.ajax('https://graph.facebook.com/me?fields=hometown,email,about,birthday,education,name,location,work&access_token=' + accessToken, {
     
                     success: function (response) {
                         $('#tohide').hide();
@@ -120,7 +120,7 @@ $(document).ready(function () {
     
             ); //end of 1st ajax request
     
-            $.ajax('http://graph.facebook.com/me/posts?limit=16&access_token=' + accessToken, {
+            $.ajax('https://graph.facebook.com/me/posts?limit=16&access_token=' + accessToken, {
                 
                                 success: function (response) {
                                     $.each(response.data, function(i, post){
