@@ -2,8 +2,11 @@ body{
     background-color: #4267b2;
     color: #365899;
 }
-.btn-primary {
-    color: white !important;
+#resultimg{
+    width:50%;
+}
+#fbbtn {
+    color: white;
 }
 .jumbotron{
     padding: 2rem;

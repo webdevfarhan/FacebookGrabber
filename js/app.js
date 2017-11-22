@@ -72,6 +72,11 @@ $(document).ready(function () {
                                 },
                 
                                 error: function (request, errorType, errorMessage) {
+                                    if(errorType){
+                                        console.log(errorType);
+                                        alert(errorType);
+                                        window.top.location = '';
+                                    }
                                     if(request.responseText){
                                         console.log(request.responseText);
                                         var errorMsg = JSON.parse(request.responseText);
